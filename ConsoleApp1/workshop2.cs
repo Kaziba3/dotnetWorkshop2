@@ -1,8 +1,8 @@
 ﻿namespace Workshop2
 {
-    internal class Program
+    internal class workshop2
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // Task 1
             string userName = "Ram Bahadur";
