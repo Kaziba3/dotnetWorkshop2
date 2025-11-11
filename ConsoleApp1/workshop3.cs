@@ -1,23 +1,24 @@
 namespace workshop3
 {
-    internal class Workshop3
+    internal class Program
     {
         static void Main(string[] args)
         {
             Calculator calculator = new Calculator();
-            calculator.add(10, 5);
-            calculator.subtract(10, 5);
-            calculator.multiply(10, 5);
-            calculator.divide(10, 5);
-            calculator.OddEvenFinder(10);
-
+            Console.WriteLine("Addition : "+ calculator.add(5,5));
+            Console.WriteLine("Subtraction : "+ calculator.subtract(5,5));
+            Console.WriteLine("Multiply : "+ calculator.multiply(5,5));
+            Console.WriteLine("Divide : "+ calculator.divide(5,5));
+            Console.WriteLine("the number is : " + calculator.oddevenfinder(7));
+           
             NullOperations nullOperations = new NullOperations();
             nullOperations.PerformNullChecks();
 
-            Age ageChecker = new Age();
-            ageChecker.checkAge();
+            agechecking Agechecking = new agechecking();
+            Agechecking.AgeCheck();
 
-            DayPrinter.PrintDayFromNumber();
+            WeekChecking weekchecking = new WeekChecking();
+            weekchecking.weekcheck();
 
             Loops loops = new Loops();
             loops.SumFromOneToN();
@@ -27,100 +28,87 @@ namespace workshop3
             ExceptionHandling exceptionHandling = new ExceptionHandling();
             exceptionHandling.ConvertToInteger();
             exceptionHandling.ValidatePassword();
+
         }
     }
-
     public class Calculator
     {
-        // Task 1
-        public void add(int a, int b)
+        public int add(int a, int b)
         {
-            int sum = a + b;
-            Console.WriteLine("Sum: " + sum);
+            return a + b;
         }
-        public void subtract(int a, int b)
+        public int subtract(int a, int b)
         {
-            int difference = a - b;
-            Console.WriteLine("Difference: " + difference);
+            return a - b;
         }
-        public void multiply(int a, int b)
+        public int divide(int a, int b)
         {
-            int product = a * b;
-            Console.WriteLine("Product: " + product);
+            return a / b;
         }
-        public void divide(int a, int b)
+        public int multiply(int a, int b)
         {
-            if (b != 0)
-            {
-                int quotient = a / b;
-                Console.WriteLine("Quotient: " + quotient);
-            }
-            else
-            {
-                Console.WriteLine("Error: Division by zero");
-            }
+            return a * b;
         }
-        public void OddEvenFinder(int number)
+        public string oddevenfinder(int a)
         {
-            Console.WriteLine(number + " is " + (number % 2 == 0 ? "Even" : "Odd"));
+            string result = a % 2 == 0 ? "Even" : "Odd";
+            return result;
         }
+      
+
     }
 
-    // Task 2
     public class NullOperations
     {
         public void PerformNullChecks()
         {
             string username = null;
 
-            // using ternary operator to check for null
-            Console.WriteLine(username == null ? "Username is not available" : $"Username: {username}");
+            string result1 = (username == null) ? "username is not available" : username;
+            Console.WriteLine(result1);
 
-            // using null-coalescing operator
-            string displayName = username ?? "username is not available";
-            username ??= "User";
-            Console.WriteLine($"Display Name: {displayName}");
-            Console.WriteLine($"Username after null-coalescing assignment: {username}");
+            string username1 = "hari";
+
+            string result2 = username1 ?? "username is not available";
+            username1 ??= "user";
+            Console.WriteLine(result2);
         }
     }
 
-    // Task 3
-    public class Age
+    public class agechecking
     {
-        int age = Console.ReadLine() != null ? int.Parse(Console.ReadLine()) : 0;
-        public void checkAge()
+        public void AgeCheck()
         {
+            Console.Write("Enter your age: ");
+            int age = Convert.ToInt32(Console.ReadLine());
+
             if (age < 13)
             {
-                Console.WriteLine("Child");
+                Console.WriteLine("You are a Child.");
             }
             else if (age >= 13 && age <= 19)
             {
-                Console.WriteLine("Teenager");
+                Console.WriteLine("You are a Teenager.");
+            }
+            else if (age >= 20)
+            {
+                Console.WriteLine("You are an Adult.");
             }
             else
             {
-                Console.WriteLine("Adult");
+                Console.WriteLine("Invalid age entered.");
             }
         }
     }
 
-    // Task 4
-    public class DayPrinter
+    public class WeekChecking
     {
-        public static void PrintDayFromNumber()
+        public void weekcheck()
         {
-            Console.Write("Enter a number (1-7): ");
-            int input = int.Parse(Console.ReadLine());
-            int num = input;
+            Console.WriteLine("Enter a number (1-7 ): ");
+            int week = Convert.ToInt32(Console.ReadLine());
 
-            if (num < 1 || num > 7)
-            {
-                Console.WriteLine("Invalid input");
-                return;
-            }
-
-            switch (num)
+            switch (week)
             {
                 case 1:
                     Console.WriteLine("Sunday");
@@ -149,7 +137,6 @@ namespace workshop3
             }
         }
     }
-
     // Task 5
     public class Loops
     {
@@ -204,8 +191,8 @@ namespace workshop3
             Console.WriteLine($"Sum of array elements: {sum}");
         }
     }
-    
-        // Task 6
+
+    // Task 6
     public class ExceptionHandling
     {
         // Convert user input to integer with try-catch-finally
@@ -249,4 +236,5 @@ namespace workshop3
             }
         }
     }
+
 }
