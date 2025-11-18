@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ARYAN\\OneDrive\\Desktop\\DotnetWorkshop2\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "c:\\Users\\ARYAN\\OneDrive\\Desktop\\DotnetWorkshop2\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ARYAN\\OneDrive\\Desktop\\DotnetWorkshop2\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "c:\\Users\\ARYAN\\OneDrive\\Desktop\\DotnetWorkshop2\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ARYAN\\OneDrive\\Desktop\\DotnetWorkshop2\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "c:\\Users\\ARYAN\\OneDrive\\Desktop\\DotnetWorkshop2\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "C:\\Users\\ARYAN\\OneDrive\\Desktop\\DotnetWorkshop2\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectPath": "c:\\Users\\ARYAN\\OneDrive\\Desktop\\DotnetWorkshop2\\ConsoleApp1\\ConsoleApp1.csproj",
         "packagesPath": "C:\\Users\\ARYAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ARYAN\\OneDrive\\Desktop\\DotnetWorkshop2\\ConsoleApp1\\obj\\",
+        "outputPath": "c:\\Users\\ARYAN\\OneDrive\\Desktop\\DotnetWorkshop2\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ARYAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
